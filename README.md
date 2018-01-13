@@ -34,5 +34,4 @@ You don't have to use one method exclusively, it is no problem to download files
 
 The program is far from perfect, but I only made it for myself, it was never intended to be a real stand-alone application. I'm happy if you find any use for it anyways :)
 
-__*~ JK*__
-[GitHub](https://github.com/JohannesKnopp/)
+**_~ JK_**
