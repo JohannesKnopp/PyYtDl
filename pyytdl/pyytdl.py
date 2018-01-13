@@ -1,7 +1,7 @@
-import pafy
-import configparser
 import os
 import re
+import configparser
+import pafy
 import taglib
 
 conf_params = configparser.RawConfigParser()
@@ -39,15 +39,15 @@ for line in file:
 
     if is_metadata:
         try:
-            audio.download(output_location + song[1] + ".m4a")
-            audio_file = taglib.File(output_location + song[1] + ".m4a")
-            audio_file.tags["TITLE"], audio_file.tags["ARTIST"] = song[1], song[2]
+            audio.download(output_location + song[2] + ".m4a")
+            audio_file = taglib.File(output_location + song[2] + ".m4a")
+            audio_file.tags["ARTIST"], audio_file.tags["TITLE"] = song[1], song[2]
             audio_file.save()
             audio_file.close()
-            print("Successfully downloaded " + song[1] + ".m4a")
+            print("Successfully downloaded " + song[2] + ".m4a")
         except FileExistsError:
-            print("ERROR: " + song[1] + ".m4a already exists")
-            os.remove(os.path.join(output_location, song[1] + ".m4a.temp"))
+            print("ERROR: " + song[2] + ".m4a already exists")
+            os.remove(os.path.join(output_location, song[2] + ".m4a.temp"))
     else:
         try:
             audio.download(output_location)
