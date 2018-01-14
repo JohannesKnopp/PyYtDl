@@ -1,4 +1,18 @@
 # PyYtDl - by JK
+##Prerequisites
+If you want to download files in another format than .m4a you'll have to install ffmpeg and add the binary folder to your PATH system variable. Get the correct version for your OS and 32/64 bit from https://www.ffmpeg.org/download.html
+Unzip the file and move the folder to a directory of your choice. Copy the path to the bin folder (because ffmpeg.exe is in there) and add that path to global system variable PATH, Tutorial [here](https://www.nextofwindows.com/how-to-addedit-environment-variables-in-windows-7).
+It is still possible to download .m4a files if you don't have ffmpeg.
+
+If you  don't want to use the .exe (on https://github.com/JohannesKnopp/PyYtDl-Build), you'll have to install python 3.6 and some packages. After the installation write this into the command-line interface.
+```commandline
+pip install pafy youtube-dl pytaglib configparser pydub
+```
+To run the program then simply run the file from the command-line:
+```commandline
+python download.py
+```
+If you use the executable, you won't need to install python.
 ## config.ini
 #### download_list_location
 Path to the input file (where the youtube-links are).
